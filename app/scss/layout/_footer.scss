@@ -1,0 +1,125 @@
+@use '../util/' as u;
+
+.footer{
+
+    background-color: hsl(192, 100%, 9%);
+    color: hsl(208, 11%, 85%);
+    padding: u.rem(150) u.rem(30) u.rem(0);
+
+    @include u.breakpoint(medium){
+        width: 135%;
+    }
+
+    @include u.breakpoint(large){
+        width: 100%;
+    }
+
+    &__top{
+        @include u.breakpoint(medium){
+            display: flex;
+            gap: u.rem(130);
+            padding: u.rem(0) u.rem(100);
+            margin-top: u.rem(10);
+        }
+
+        @include u.breakpoint(large){
+            gap: u.rem(170);
+        }
+        
+    }
+
+    &__left{
+
+        & .logo-bottom{
+            width: u.rem(170);
+            height: u.rem(23);
+        }
+    }
+
+    &__contact{
+        display: flex;
+        gap: u.rem(25);
+        margin-top: u.rem(25);
+        padding-right: u.rem(20);
+
+        @include u.breakpoint(medium){
+           
+        }
+   
+        & img{
+            width: u.rem(15);
+            height: u.rem(13);
+            margin-top: u.rem(5);
+
+            @include u.breakpoint(medium){
+               width: u.rem(10);
+            }
+            
+        }
+    }
+
+    &__middle{
+        margin-top: u.rem(40);
+
+        @include u.breakpoint(medium){
+            display: flex;
+            gap: u.rem(80);
+        }
+    }
+
+    & li{
+        margin: u.rem(12) u.rem(0);
+    }
+
+    &__detailB{
+        margin-top: u.rem(-5);
+
+        @include u.breakpoint(medium){
+            margin-top: u.rem(0);
+
+       }
+    }
+
+    &__right{
+        margin: u.rem(50) u.rem(0) u.rem(20);
+        text-align: center;
+
+        .fa-brands{
+            border: 1px solid hsl(0, 0%, 100%);
+            border-radius: u.rem(50);
+            padding: u.rem(12) u.rem(7);
+            margin: u.rem(0) u.rem(5);
+
+            
+            &:hover{
+                cursor: pointer;
+                color: hsl(322, 100%, 66%);
+                border: 1px solid hsl(322, 100%, 66%);
+            }
+
+            @include u.breakpoint(medium){
+               padding: u.rem(10) u.rem(5);
+            }
+        }
+        .fa-facebook-f{
+            padding: u.rem(12) u.rem(9);
+
+            @include u.breakpoint(medium){
+                padding: u.rem(10) u.rem(7);  
+             }
+        }
+    }
+
+    &__bottom{
+       margin: u.rem(10) u.rem(0) u.rem(0);
+
+       @include u.breakpoint(medium){
+        margin-top: u.rem(20);
+     }
+    }
+}
+
+  // @include u.breakpoint(large){
+    //     grid-template-columns: 2fr 1fr;
+    //     grid-template-rows: auto;
+    // }

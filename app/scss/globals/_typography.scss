@@ -1,0 +1,219 @@
+@use '../util/' as u;
+
+h1,
+h2,
+h3{
+    margin-top: 0;
+    font-family: u.$font2;
+}
+p{
+    margin-top: 0;
+    font-size: u.rem(16);
+}
+a,
+a:visited,
+a:active{
+    text-decoration: none;
+}
+ul,
+li{
+    list-style-type: none;
+    padding: u.rem(0);
+}
+
+h1{
+    font-size: clamp(u.rem(8), u.rem(14) + 2vw, u.rem(22));
+    text-align: center;
+    font-weight: 600;
+    padding: u.rem(40) u.rem(10) u.rem(10);
+    line-height: 1.5;
+
+    @include u.breakpoint(medium){
+       font-size: u.rem(30);
+       text-align: left;
+       padding-left: u.rem(0);
+     
+    }
+}
+
+h2{
+    font-size: clamp(u.rem(8), u.rem(14) + 2vw, u.rem(18));
+
+    @include u.breakpoint(medium){
+        text-align: left;
+        font-size: u.rem(24);
+  }
+   
+}
+
+h3{
+    font-size: clamp(u.rem(8), u.rem(14) + 2vw, u.rem(16.5));
+    font-weight: 600;
+    margin-top: u.rem(20);
+    padding-top: u.rem(25);
+    text-align: center;
+
+    @include u.breakpoint(medium){
+       
+        font-size: u.rem(24);
+  }
+}
+
+.btn{
+    font-size: u.rem(10);
+    font-weight: 600;
+
+    &__third{
+        @include u.breakpoint(medium){
+            font-size: u.rem(12);
+       }
+    }
+  
+}
+
+.header{
+
+    p{
+        text-align: center;
+        font-weight: 400;
+        font-size: u.rem(14);
+        padding: u.rem(2) u.rem(5);
+        line-height: 1.6;
+
+        @include u.breakpoint(medium){
+            padding: u.rem(0);
+            text-align: left;
+            font-size: u.rem(13);
+         }
+    }
+}
+
+.main{
+
+    &__left{
+
+        p{
+            font-size: u.rem(14);
+            color: hsl(208, 11%, 55%);
+            margin: u.rem(5) u.rem(0) u.rem(0);
+            padding: u.rem(10);
+
+            @include u.breakpoint(medium){
+                text-align: left;
+                padding: u.rem(0);
+                font-size: u.rem(16);
+                margin-top: u.rem(20);
+           }
+        }
+    }
+
+    
+
+    &__grow{
+
+         @include u.breakpoint(medium){
+
+            p{
+                padding-right: u.rem(60);
+            }
+        }
+        
+    }
+
+    &__flowing{
+
+        @include u.breakpoint(medium){
+
+            p,
+            h2{
+                padding-left: u.rem(120);
+            }
+        }
+    }
+  
+
+    &__users{
+
+        p{
+            padding: u.rem(15);
+        }
+
+        
+       @include u.breakpoint(medium){
+            p{
+                padding: u.rem(0) u.rem(80) u.rem(0) u.rem(0);
+            }
+        }
+       
+    }
+}
+
+.footer{
+
+    p{
+        font-size: u.rem(14);
+        margin-bottom: u.rem(0);
+
+        @include u.breakpoint(medium){
+           font-size: u.rem(12);
+
+        }
+        
+    }
+
+    &__contact{
+
+        @include u.breakpoint(medium){
+            p{
+                width: u.rem(250);
+            }
+         }
+        
+    }
+
+    li{
+        font-size: u.rem(15);
+        
+
+        &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        @include u.breakpoint(medium){
+            font-size: u.rem(12);
+         }
+    }
+
+
+    .fa-brands{
+
+
+        @include u.breakpoint(medium){
+            font-size: u.rem(10);
+            
+         }
+    }
+    
+    &__bottom{
+        p{
+            font-size: u.rem(10);
+            text-align: center;
+            margin: u.rem(5) u.rem(0) u.rem(5);
+
+            @include u.breakpoint(medium){
+                text-align: right;
+             }
+        }
+    }
+
+    &__attribution{
+
+        p{
+            @include u.breakpoint(medium){
+                text-align: center;
+             }
+        }
+           
+    }
+}
